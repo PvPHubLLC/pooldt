@@ -1,0 +1,16 @@
+{
+    "id": "hello",
+	"pterodactyl": {
+    	"nest": 7, // other
+        "egg": 18,  // nodejs
+        "env": {
+            "BRANCH": "main"
+        },
+        "allocationIps": [
+            "172.18.0.1"
+        ],
+        "startupCmd": "echo Hello world from template!"
+    },
+    "ram": 1024,
+    "storage": 4096
+}

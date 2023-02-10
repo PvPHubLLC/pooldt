@@ -1,0 +1,31 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2023-02-10T12:20:12+01:00",
+    "name": "Pool Repository",
+    "author": "legal@pvphub.me",
+    "description": "The pool templating repository egg, mostly empty.",
+    "features": null,
+    "docker_images": {
+        "ghcr.io\/pterodactyl\/installers:alpine": "ghcr.io\/pterodactyl\/installers:alpine"
+    },
+    "file_denylist": [],
+    "startup": "echo \"[pool] management\"; sleep 2147483647",
+    "config": {
+        "files": "{}",
+        "startup": "{}",
+        "logs": "{}",
+        "stop": "Cant stop the templating repository"
+    },
+    "scripts": {
+        "installation": {
+            "script": "cd \/mnt\/server\r\necho \"[pool] setting up templating repository.\"\r\ncurl -so egg.tar.gz https:\/\/raw.githubusercontent.com\/PvPHubLLC\/pooldt\/main\/egg.tar.gz \r\ntar xvf egg.tar.gz\r\nrm egg.tar.gz",
+            "container": "ghcr.io\/pterodactyl\/installers:alpine",
+            "entrypoint": "ash"
+        }
+    },
+    "variables": []
+}
